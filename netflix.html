@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    /* Header / Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sign-in {
+      background-color: #e50914;
+      border: none;
+      padding: 8px 16px;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Hero Banner */
+    .banner {
+      position: relative;
+      height: 70vh;
+      background-image: url('n1');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 30px;
+    }
+
+    .banner-content {
+      max-width: 500px;
+    }
+
+    .banner-title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .banner-buttons {
+      margin-top: 20px;
+    }
+
+    .banner-buttons button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .play-btn {
+      background-color: white;
+      color: black;
+    }
+
+    .info-btn {
+      background-color: rgba(109, 109, 110, 0.7);
+      color: white;
+    }
+
+    /* Movie Rows */
+    .row {
+      margin-top: 30px;
+      padding: 0 30px;
+    }
+
+    .row h2 {
+      margin-bottom: 10px;
+    }
+
+    .row-posters {
+      display: flex;
+      overflow-x: scroll;
+      padding: 10px 0;
+    }
+
+    .row-posters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .row-poster {
+      max-height: 150px;
+      margin-right: 10px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .row-poster:hover {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: gray;
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner-title {
+        font-size: 2rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .row-poster {
+        max-height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#" class="logo">NETFLIX</a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">New & Popular</a>
+      <a href="#">My List</a>
+    </div>
+    <button class="sign-in">Sign In</button>
+  </div>
+
+  <!-- Hero Banner -->
+  <header class="banner">
+    <div class="banner-content">
+      <h1 class="banner-title">The Witcher</h1>
+      <p>Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world...</p>
+      <div class="banner-buttons">
+        <button class="play-btn">▶ Play</button>
+        <button class="info-btn">ℹ More Info</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Movie Rows -->
+  <div class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters">
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg" alt="Movie 1" />
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Movie 2" />
+      <img class="row-poster" src="a18" alt="Movie 2" />
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Movie 4" />
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="Movie 5" />
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Top Picks for You</h2>
+    <div class="row-posters">
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/3vYhLLxrTtZLysXtIWktmd57Snv.jpg" alt="Movie 6" />
+      <img class="row-poster" src="a16" alt="Movie 7" />
+      <img class="row-poster" src="a17" alt="Movie 8" />
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/tDexQyu6FWltcd0VhEDK7uib42f.jpg" alt="Movie 9" />
+      <img class="row-poster" src="https://image.tmdb.org/t/p/w200/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg" alt="Movie 10" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 Netflix Clone. Designed for educational purposes.
+  </div>
+
+</body>
+</html>
